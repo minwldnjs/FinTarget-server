@@ -25,4 +25,8 @@ public class User {
     public void prePersist() {
         this.createdAt = LocalDateTime.now();
     }
+    public void updateProfile(String name, String region) {
+        if (name != null) this.name = name;
+        if (region != null) this.region = region;
+    }
 }
